@@ -1,0 +1,81 @@
+.navbar-brand img{
+    width: 80%;
+}
+
+.navbar-toggler-icon svg {
+    fill: var(--white-color);
+    width: 24px;
+    height: 24px;
+}
+
+
+
+.react-select-container .react-select__control, .react-select-container .react-select__menu{
+    background-color: var(--graydark-color);
+    border: var(--graydark-color);
+   border-radius: 30px;
+   min-height: 45px;
+   min-width: 190px;
+
+}
+.react-select-container .react-select__single-value{
+    color: var(--white-color) !important;
+    margin-right: 15px;
+}
+
+.react-select-container .react-select__indicators svg{
+    fill:var(--gray-color);
+}
+.react-select-container .react-select__indicator-separator{
+    width:0;
+}
+
+.react-select-container .react-select__option{
+        border-radius: 30px;
+        background-color: transparent;
+}
+.react-select-container .react-select__control{
+     box-shadow: none;
+}
+.react-select-container .react-select__control:hover{
+     border-color: var(--graydark-color);
+    
+}
+
+.react-select-container .react-select__option--is-focused, .react-select-container .react-select__option--is-selected {
+    color: var(--primary-color);
+}
+.headernum{
+   
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: var(--weight-500);
+    border-radius: 30px;
+    font-size: var(--font16);
+    line-height: 21px;
+    color: var(--white-color);
+    padding: 11px 30px;
+    transition: all ease-in-out 0.3s;
+    border:1px solid  var(--white-color);
+}
+.round-btn{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+@media (max-width:768px) {
+    .react-select-container .react-select__menu{
+        position: relative;
+    }
+    .navbar-collapse{
+        position: absolute;
+        top: 44px;
+        z-index: 9;
+        background: rgb(2 50 99);
+        width: 95%;
+        padding: 20px 10px;
+        border-radius: 10px;
+    }
+    .round-btn{
+        width: 100%;
+    }
+}

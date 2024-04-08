@@ -1,0 +1,23 @@
+
+
+  .step-btn .btn{
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .step-btn .btn-secondary{
+    color: var(--white-color);
+    background: var(--secondary-hover) ;
+    border-color: var(--secondary-color);
+  }
+
+  @media (max-width: 768px) {
+    .step-btn .btn{
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+
+  

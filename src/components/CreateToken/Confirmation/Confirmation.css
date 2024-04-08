@@ -1,0 +1,10 @@
+.step-confirm label{
+    color: #797F99;
+    font-size: var(--font16);
+}
+
+.step-confirm p{
+    font-size: var(--font20);
+    font-weight: 500;
+    color: #fff;
+}

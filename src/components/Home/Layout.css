@@ -1,0 +1,6 @@
+.main-bg{
+    background: url('../../assests/bg.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}

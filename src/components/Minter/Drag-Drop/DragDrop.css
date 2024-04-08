@@ -1,0 +1,46 @@
+.dropzone{
+    border: 1px dashed #1E69FF;
+    background-color: #1e69ff14;
+    height: 280px;
+    min-height: 100%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.btnClose{
+    height: fit-content;
+    position: absolute;
+    right: 0;
+}
+.middletext{
+   height: 280px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.light-font{
+    color: #797F99;
+    font-size: var(--font12);
+}
+.btn-upload{
+    background: transparent;
+   
+    color: #1E69FF;
+    border: none;
+    text-decoration: underline;
+}
+.center-content{
+    position: absolute!important;
+    top: 34%;
+    margin: auto;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+ .btn {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: 5px;
+    margin-right: 5px;
+}

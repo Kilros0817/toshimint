@@ -1,0 +1,8 @@
+.footer-icon a img{
+    width: 80%;
+}
+@media (max-width:768px) {
+    .footer-icon a img{
+    width: 60%;
+}
+}

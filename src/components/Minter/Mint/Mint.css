@@ -1,0 +1,4 @@
+ .nft-bg .card{
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
