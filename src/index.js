@@ -10,11 +10,11 @@ import { BrowserRouter } from 'react-router-dom';
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import "@rainbow-me/rainbowkit/styles.css";
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
-import { arbitrum, base, optimism, polygonMumbai } from "wagmi/chains";
+import { arbitrum, base, optimism, arbitrumSepolia } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
 
 const { chains, publicClient } = configureChains(
-  [arbitrum, base, optimism, polygonMumbai],
+  [arbitrum, base, optimism, arbitrumSepolia],
   [publicProvider()]
 );
 
