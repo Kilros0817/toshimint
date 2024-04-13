@@ -14,14 +14,14 @@ const thumbsContainer = {
 const thumb = {
   display: "inline-flex",
   borderRadius: 2,
- justifyContent:"center",
+  justifyContent: "center",
   paddingBottom: 8,
- 
+
   width: '100%',
   height: 280,
   padding: 4,
   boxSizing: "border-box",
-  zIndex:0,
+  zIndex: 0,
   backgroundColor: "rgb(5 47 91)"
 };
 
@@ -37,7 +37,7 @@ const img = {
   height: "100%"
 };
 
-function Dropzone(props) {
+function Dropzone({setImage = () => {}}) {
   const [files, setFiles] = useState([]);
   const { getRootProps, getInputProps, open } = useDropzone({
     accept: "image/*",
@@ -49,6 +49,7 @@ function Dropzone(props) {
           })
         )
       );
+      setImage(acceptedFiles[0])
     }
   });
 
@@ -56,6 +57,7 @@ function Dropzone(props) {
     const newFiles = [...files];
     newFiles.splice(newFiles.indexOf(file), 1);
     setFiles(newFiles);
+    setImage('')
   };
 
   const thumbs = files.map((file) => (
@@ -77,24 +79,24 @@ function Dropzone(props) {
 
   return (
     <section>
-<div
+      <div
         {...getRootProps({ className: "dropzone" })}
         onClick={(e) => e.stopPropagation}
-        
+
       >
         <div className="position-absolute center-content">
-            <input {...getInputProps()} />
-            <img src={paper} alt="paper" className="mb-2" />
-        <p className="mb-1"> Drag media or <button type="button" onClick={open} className="btn-upload">
-        Upload
+          <input {...getInputProps()} />
+          <img src={paper} alt="paper" className="mb-2" />
+          <p className="mb-1"> Drag media or <button type="button" onClick={open} className="btn-upload">
+            Upload
           </button></p>
-        
+
           <span className="light-font pt-3">(Supported:JPEG, GIF, PNG, SVG, glTF, GLB, MP3, MP4, WebM)</span>
         </div>
-        
+
 
         <div>
-          
+
           <aside style={thumbsContainer}>{thumbs}</aside>
         </div>
       </div>
@@ -102,7 +104,7 @@ function Dropzone(props) {
 
 
 
-        {/* <div className= "dropzone" >
+      {/* <div className= "dropzone" >
       <div
         {...getRootProps}
         role="button" onClick={open}

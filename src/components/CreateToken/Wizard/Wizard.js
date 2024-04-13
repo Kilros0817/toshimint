@@ -12,7 +12,7 @@ import './Wizard.css';
 import { useNetwork, useAccount } from "wagmi";
 import TokenAttribute from "../TokenAttribute/TokenAttribute";
 import Confirmation from "../Confirmation/Confirmation";
-import { contractAddresses } from "../../../utils/constant";
+import { tokenDeployer } from "../../../utils/constant";
 import ToshiMinterInterface from "../../../abi/ToshiMinter.json";
 
 
@@ -61,7 +61,7 @@ const Sample = () => {
   useEffect(() => {
     if (chain) {
       setToshiMinterConf({
-        address: contractAddresses[chain?.id],
+        address: tokenDeployer[chain?.id],
         abi: ToshiMinterInterface,
       });
     }
