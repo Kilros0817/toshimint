@@ -51,7 +51,7 @@ const Sample = () => {
         mode: "recklesslyUnprepared",
         ...toshiMinterConf,
         functionName: "deployToken",
-        args: [user.token_name, user.token_symbol, user.decimals, user.initial_supply, user.tax_fee, user.receive_address],
+        args: [user.token_name, user.token_symbol, user.decimals, user.initial_supply, (+user.tax_fee) * 10, user.receive_address],
       });
     } catch (e) {
       console.log(e, "error");
